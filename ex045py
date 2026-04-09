@@ -1,0 +1,18 @@
+from random import choice
+player = input("Pedra, Papel, tesoura: ").lower()
+computador = ['pedra', 'papel', 'tesoura']
+escolha = choice(computador)
+if player == 'pedra' and escolha == 'tesoura':
+    print("Tesoura! Venceu.")
+elif player == 'tesoura' and escolha == 'papel':
+    print("Papel! Venceu.")
+elif player == 'papel' and escolha == 'pedra':
+    print('Pedra! Venceu.')
+if escolha == 'pedra' and player == 'tesoura':
+    print("Pedra! Perdeu.")
+elif escolha == 'tesoura' and player == 'papel':
+    print("Tesoura! Perdeu.")
+elif escolha == 'papel' and player == 'pedra':
+    print('Papel! Perdeu.')     
+elif escolha == player:
+    print('empate')
