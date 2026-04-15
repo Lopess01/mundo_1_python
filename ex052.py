@@ -1,14 +1,15 @@
-primo = True
 n = int(input("Digite um número: "))
 if n <= 1:
-    print("não primo")
+    x ="não primo"
+elif n == 2:
+    x = "é primo"
+elif n > 2 and n % 2 == 0:
+    x ='nao primo'
 else:
-    for i in range(2,n):
-        print(f'{n} ÷ {i} = {n/i:.2f}')
+    for i in range(2, n):
         if n % i == 0:
-            primo = False
+            x = 'não primo'
             break
-    if primo == True:
-        print("primo")
-    else:
-        print('nao primo')    
+        else:
+            x = 'primo!!!!!'  
+print(x)
